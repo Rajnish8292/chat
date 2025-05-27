@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chat - app</title>
+        <link rel="stylesheet" href="/css/design.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+    <body>
+        <div class="whiite-wrap"></div>
+        <div class="edit_modal" style="display:none">
+            <span>Edit chat</span>
+            <input type="text" class="edit__in">
+            <button class="cccl__btn">Cancel</button>
+            <button class="edit__btn" style="background:rgb(239, 239, 239);color:rgb(121, 85, 72)">Save change</button>
+            
+        </div>
+        <div class="deleteSurity__modal">
+            <span>loading ...</span>
+            <div class="btn_holder__del_su">
+                <button class="btn__del_su delch">Delete</button>
+                <button class="btn__del_su canchat">Cancel</button>
+            </div>
+        </button>
+        </div>
+        <div class="setting">
+            <div class="btn__Setting memberdisplay">Members</div>
+            <!-- <hr> -->
+            <div class="logotu__btn btn__Setting" style="background-color: rgb(121, 85, 72);color:white;">Log Out</div>
+        </div>
+        <div class="chat__page" id="body__page">
+            <div class="top__nav">
+                <span class="greet_txt" style="margin-left:10px;">Hello User</span>
+                <button class="o__setting">setting</button>
+            </div>
+            <div class="mid__chat">
+               <div class="blocks console_side" style="display:block;margin-left:-300px;">
+                   <div class="clients">
+                       <span class="ccl">Loading accounts ...</span>
+                       <span class="material-icons show_friendlist" style="display:block">close</span>
+                </div>
+                   
+                   <div class="console__page active__list" style="display: none;"></div>
+                   <div class="console__page member_list" style="display: block;"></div>
+               </div>
+               <div class="blocks chat_side"><p id="lo">loading chat ...</p></p></div>
+            </div>
+            <div class="bottom__chat_nav">
+                <div class="bind_in_elem">
+                    <div class="typing__log"><span>connected</span></div>
+                    <input type="text" placeholder="type message ..." class="chat__in">
+                    <!-- <div class="elem"><span class="clear__input">close</span></div> -->
+                </div>
+            </div>
+            <div class="action__bottom_nav" style="display:none">
+                <span class="ooo">0 selected</span>
+                <div class="action_btn__holder">
+                    <div class="material-icons action__btn edit___btn">edit</div>
+                    <div class="material-icons action__btn del__btn">delete</div>
+                    <div class="material-icons action__btn close__select">close</div>
+                </div>
+            </div>
+        </div>
+        <div class="account__page" id="body__page" style="background-color: rgb(121, 85, 72);">
+            <div class="transparent__cover"></div>
+            <div id="fix__strip" class="fixTo__top"></div>
+            <div id="fix__strip" class="fixTo__bottom"></div>
+            <div id="mid__content" class="tyyu" style="width:100%; transition:0.2s;">
+                <div id="mid__content" style="width:692.39px">
+                    <div class="user__cont close"  style="display: inline-block;">
+                        <input type="text" class="username" id="acc_in" placeholder="username">
+                    </div>
+                    <div class="pass__cont close"  style="display: inline-block;">
+                        <input type="text" class="password" id="acc_in" placeholder="password">
+                    </div>
+                    <br>
+                    <button class="submitBtn" id="btnSubmit">Lets Go</button>
+                </div>
+                
+        </div>
+        <!-- 692.39 -->
+       <div class="loading__page" id="body__page">
+        
+            <div id="mid__content">
+              <div class="anim__load"></div>
+            </div>
+            <span id="bottom__left">Loading...</span>
+        </div>
+        <script src="/js/script.js" type="text/javascript"></script>
+        <script src="/js/timescript.js" type="text/javascript"></script>
+        <script>
+           // alert(document.getElementsByClassName('activemember').length)
+            window.onload = function() {
+                if(owner === 'not Owned!') {
+                    return null;
+                } else {
+                    crescript();
+                }
+            }
+        </script>
+    </body>
+
+</html>
